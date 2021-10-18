@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[200],
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -20,7 +22,6 @@ class _HomeState extends State<Home> {
             child: Container(
               color: Colors.amber,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   TextButton.icon(
@@ -33,6 +34,8 @@ class _HomeState extends State<Home> {
                   ),
                   Divider(
                     height: 0,
+                    color: Colors.grey[400],
+                    thickness: 0,
                   ),
                   TextButton.icon(
                     onPressed: () {},
@@ -44,6 +47,8 @@ class _HomeState extends State<Home> {
                   ),
                   Divider(
                     height: 0,
+                    color: Colors.grey[400],
+                    thickness: 0,
                   ),
                   TextButton.icon(
                       onPressed: () {},
@@ -62,7 +67,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    color: Colors.amber[300],
+                    color: Colors.amber[400],
                     child: Wrap(
                       alignment: WrapAlignment.spaceEvenly,
                       children: [
@@ -75,6 +80,11 @@ class _HomeState extends State<Home> {
                               fontSize: 12,
                             ),
                           ),
+                        ),
+                        VerticalDivider(
+                          color: Colors.grey[400],
+                          width: 0,
+                          thickness: 14,
                         ),
                         TextButton(
                           onPressed: () {},

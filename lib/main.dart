@@ -5,6 +5,7 @@ import 'package:music_player_app/App%20Pages/loading.dart';
 import 'package:music_player_app/App%20Pages/profile.dart';
 
 void main() {
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(SafeArea(
     top: true,
     child: MaterialApp(

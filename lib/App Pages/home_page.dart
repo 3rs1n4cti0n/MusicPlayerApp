@@ -81,11 +81,6 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
-                        VerticalDivider(
-                          color: Colors.grey[400],
-                          width: 0,
-                          thickness: 14,
-                        ),
                         TextButton(
                           onPressed: () {},
                           child: Text(

@@ -5,7 +5,7 @@ import 'package:music_player_app/App%20Pages/profile.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/home',
+    initialRoute: '/profile',
     routes: {
       '/': (context) => const LoadingPage(),
       '/home': (context) => const Home(),

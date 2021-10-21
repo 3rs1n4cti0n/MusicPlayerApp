@@ -25,107 +25,121 @@ class _HomeState extends State<Home> {
                     child: Container(
                       color: Colors.amber,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          TextButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.home_outlined,
-                                color: Colors.amber[900]),
-                            label: Text(
-                              'Home',
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(color: Colors.amber[900]),
-                            ),
-                          ),
-                          Divider(
-                            height: 0,
-                            color: Colors.grey[400],
-                            thickness: 0,
-                          ),
-                          TextButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.account_box_outlined,
-                                color: Colors.amber[900]),
-                            label: Text(
-                              'Profile',
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(color: Colors.amber[900]),
-                            ),
-                          ),
-                          Divider(
-                            height: 0,
-                            color: Colors.grey[400],
-                            thickness: 0,
-                          ),
-                          TextButton.icon(
+                          Expanded(
+                            child: TextButton(
                               onPressed: () {},
-                              icon: Icon(Icons.settings,
-                                  color: Colors.amber[900]),
-                              label: Text(
-                                'Settings',
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(color: Colors.amber[900]),
-                              )),
+                              child: Icon(Icons.home_filled,
+                                  color: Colors.amber[200]),
+                            ),
+                          ),
+                          Divider(
+                            height: 0,
+                            color: Colors.grey[400],
+                            thickness: 0,
+                          ),
+                          Expanded(
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Icon(Icons.account_box_outlined,
+                                  color: Colors.amber[200]),
+                            ),
+                          ),
+                          Divider(
+                            height: 0,
+                            color: Colors.grey[400],
+                            thickness: 0,
+                          ),
+                          Expanded(
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Icon(Icons.settings,
+                                  color: Colors.amber[200]),
+                            ),
+                          ),
                         ],
                       ),
                     ),
                   ),
                   Flexible(
-                      flex: 2,
+                      flex: 5,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Container(
-                            color: Colors.amber[400],
-                            child: Wrap(
-                              alignment: WrapAlignment.spaceEvenly,
-                              children: [
-                                TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Albums',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.amber[800],
+                          Flexible(
+                            flex: 1,
+                            child: Container(
+                              color: Colors.amber[400],
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Expanded(
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        'Albums',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.amber[100],
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Playlists',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Colors.amber[800],
-                                      fontSize: 12,
+                                  VerticalDivider(
+                                    width: 0,
+                                    color: Colors.grey[400],
+                                    thickness: 0,
+                                  ),
+                                  Expanded(
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        'Playlists',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          color: Colors.amber[100],
+                                          fontSize: 12,
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Songs',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Colors.amber[800],
-                                      fontSize: 12,
+                                  VerticalDivider(
+                                    width: 0,
+                                    color: Colors.grey[400],
+                                    thickness: 0,
+                                  ),
+                                  Expanded(
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        'Songs',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          color: Colors.amber[100],
+                                          fontSize: 12,
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                          Expanded(
+                          Flexible(
+                            flex: 8,
                             child: Container(
+                              height: double.infinity,
                               color: Colors.amber[300],
                               child: ListView.builder(
                                   itemCount: 150,
                                   itemBuilder: (context, index) {
                                     index++;
                                     return Container(
-                                      padding: EdgeInsets.only(left: 5, top: 5),
                                       width: double.infinity,
                                       color: Colors.amber[100],
                                       child: Column(
@@ -148,7 +162,7 @@ class _HomeState extends State<Home> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      // TODO: replce with music name
+                                                      // TODO: replace with music name
                                                       'this is music $index',
 
                                                       style: TextStyle(
@@ -189,7 +203,7 @@ class _HomeState extends State<Home> {
                                             ),
                                           ),
                                           Divider(
-                                            height: 1,
+                                            height: 0,
                                           )
                                         ],
                                       ),
@@ -230,7 +244,7 @@ class _HomeState extends State<Home> {
                           child: Text(
                             'Music Name',
                             style: TextStyle(
-                                color: Colors.amber[100],
+                                color: Colors.amber[900],
                                 fontSize: 14,
                                 fontStyle: FontStyle.italic),
                           )),

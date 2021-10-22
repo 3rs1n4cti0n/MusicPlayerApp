@@ -37,7 +37,7 @@ class _CurrentSongState extends State<CurrentSong> {
                             color: Colors.amber[200],
                           )),
                     ),
-                    VerticalDivider(
+                    const VerticalDivider(
                       width: 0,
                     ),
                     Expanded(
@@ -50,7 +50,7 @@ class _CurrentSongState extends State<CurrentSong> {
                             color: Colors.amber[200],
                           )),
                     ),
-                    VerticalDivider(
+                    const VerticalDivider(
                       width: 0,
                     ),
                     Expanded(
@@ -77,7 +77,7 @@ class _CurrentSongState extends State<CurrentSong> {
                     color: Colors.amber[900],
                   )),
 
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
               Container(
                 color: Colors.amber[500],
                 child: Column(
@@ -95,7 +95,7 @@ class _CurrentSongState extends State<CurrentSong> {
                                 size: 40,
                                 color: Colors.amber[100],
                               ),
-                              label: Text('')),
+                              label: const Text('')),
                         ),
                         // TODO: replace title with music name
                         Flexible(
@@ -116,7 +116,7 @@ class _CurrentSongState extends State<CurrentSong> {
                                 color: Colors.amber[100],
                                 size: 40,
                               ),
-                              label: Text('')),
+                              label: const Text('')),
                         )
                       ],
                     ),
@@ -138,7 +138,7 @@ class _CurrentSongState extends State<CurrentSong> {
                               size: 30,
                               color: Colors.amber[100],
                             ),
-                            label: Text('')),
+                            label: const Text('')),
                         // TODO: add go to previous song
                         TextButton.icon(
                             onPressed: () {},
@@ -147,7 +147,7 @@ class _CurrentSongState extends State<CurrentSong> {
                               size: 30,
                               color: Colors.amber[100],
                             ),
-                            label: Text('')),
+                            label: const Text('')),
                         // TODO: add play and pause function and change button accordingly
                         TextButton.icon(
                             onPressed: () {},
@@ -156,7 +156,7 @@ class _CurrentSongState extends State<CurrentSong> {
                               size: 50,
                               color: Colors.amber[100],
                             ),
-                            label: Text('')),
+                            label: const Text('')),
                         // TODO: add skip to next song
                         TextButton.icon(
                             onPressed: () {},
@@ -165,7 +165,7 @@ class _CurrentSongState extends State<CurrentSong> {
                               size: 30,
                               color: Colors.amber[100],
                             ),
-                            label: Text('')),
+                            label: const Text('')),
                         // TODO: make it so a random music is played
                         TextButton.icon(
                             onPressed: () {},
@@ -174,7 +174,7 @@ class _CurrentSongState extends State<CurrentSong> {
                               size: 30,
                               color: Colors.amber[100],
                             ),
-                            label: Text(''))
+                            label: const Text(''))
                       ],
                     )
                   ],

@@ -13,41 +13,47 @@ class _SettingsPageState extends State<SettingsPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          title: Text(
+            'Settings',
+            style: TextStyle(
+              color: Colors.amber[50],
+            ),
+          ),
           backgroundColor: Colors.amber,
           elevation: 2,
         ),
         backgroundColor: Colors.amber[200],
-        body: Container(
-          child: ListView.builder(
-              itemCount: 50,
-              itemBuilder: (context, index) {
-                index++;
-                return Container(
-                  width: double.infinity,
-                  height: 60,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Expanded(
-                              child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'This is setting no: $index',
-                                  ))),
-                        ),
+        body: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (context, index) {
+              index++;
+              return SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Flexible(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Expanded(
+                            child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'This is setting no: $index',
+                                  style: TextStyle(
+                                      color: Colors.amber[900], fontSize: 20),
+                                ))),
                       ),
-                      Divider(
-                        height: 0,
-                      ),
-                    ],
-                  ),
-                );
-              }),
-        ),
+                    ),
+                    const Divider(
+                      height: 0,
+                    ),
+                  ],
+                ),
+              );
+            }),
       ),
     );
   }

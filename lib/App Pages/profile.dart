@@ -22,69 +22,101 @@ class _ProfileState extends State<Profile> {
             Center(
               child: Icon(
                 Icons.account_circle_rounded,
-                size: 100,
+                size: 250,
                 color: Colors.amber,
               ),
             ),
             // TODO: replace with username
-            Center(
+            Divider(height: 0, thickness: 2, color: Colors.amber[700]),
+            Container(
+              color: Colors.amber[300],
+              width: double.infinity,
+              child: Center(
                 child: Text(
-              'profile name',
-              style: TextStyle(color: Colors.amber[900]),
-            )),
-            Divider(
-              height: 10,
-              thickness: 2,
-              indent: 8,
-              endIndent: 8,
+                  'profile name',
+                  style: TextStyle(color: Colors.amber[900], fontSize: 24),
+                ),
+              ),
             ),
+            Divider(height: 0, thickness: 2, color: Colors.amber[700]),
             Container(
               color: Colors.amber[100],
               width: double.infinity,
-              height: 150,
+              height: 205,
               margin: EdgeInsets.symmetric(horizontal: 12),
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-              // TODO: replace with user bio
-              child: Text(
-                'ıuas dhaısduohaıus hduıh uıshduıahsduıhadu haıosdhauıdh 98d yh89dua89dsu asıdha daısdh auıdah sd8989 asdhaıuhd ıuasduoıahdhsudıha sdha daosıdhaıusdhaıud. ıuhasdıa hod98 h89d hhdash do, hausıdhsad gıuahsuhd uıau uhushdıa: uhaısd, uıhasd, uıhası, uhsdı etc.',
-                style: TextStyle(color: Colors.amber[900]),
+              // TODO: replace with user bio and have the ability to change the bio
+              child: Column(
+                children: [
+                  Text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis finibus risus. In maximus aliquet sagittis. Praesent sed ex efficitur tortor vulputate luctus. Etiam a lacus interdum neque pulvinar maximus sit amet vel nibh. Aliquam sit amet justo sed diam faucibus cursus at sed turpis.',
+                    style: TextStyle(color: Colors.amber[700], fontSize: 18),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: TextButton(
+                        // TODO: add edit funtion
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.edit,
+                          size: 20,
+                          color: Colors.amber[500],
+                        )),
+                  )
+                ],
               ),
             ),
             Divider(
-              height: 10,
-              thickness: 2,
-              indent: 8,
-              endIndent: 8,
-            ),
+                height: 0,
+                thickness: 2,
+                indent: 8,
+                endIndent: 8,
+                color: Colors.amber[700]),
             Expanded(child: SizedBox()),
             Container(
-              height: 50,
+              height: 80,
+              width: double.infinity,
               color: Colors.amber[800],
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // TODO: return to home
-                  TextButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.home_filled,
-                        color: Colors.amber,
-                      )),
+                  Expanded(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.home_filled,
+                          color: Colors.amber,
+                          size: 50,
+                        )),
+                  ),
+                  const VerticalDivider(
+                    width: 0,
+                  ),
                   // TODO: go to currently playing music
-                  TextButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.music_note,
-                        color: Colors.amber,
-                      )),
+                  Expanded(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.music_note,
+                          color: Colors.amber,
+                          size: 50,
+                        )),
+                  ),
+                  const VerticalDivider(
+                    width: 0,
+                  ),
                   // TODO: go to settings when they will be added
-                  TextButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.amber,
-                      ))
+                  Expanded(
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.settings,
+                          color: Colors.amber,
+                          size: 50,
+                        )),
+                  )
                 ],
               ),
             )
